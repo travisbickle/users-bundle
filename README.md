@@ -8,7 +8,8 @@ Don't worry too much with the UI, the important thing is that it works according
 3. Users should be able to login using their email address and password.
 4. Users should be able to change their password.
 5. Users should be able to recover an account for which they lost the password.
-6. Users should be able to add several email addresses to their account, each one verified by sending a confirmation email.
+6. Users must be logged-in to access `/u` (the *Dashboard*)
+7. Users should be able to add several email addresses to their account, each one verified by sending a confirmation email.
 
 If you follow this README sequentially you should have no trouble implementing the above requirements.
 
@@ -19,7 +20,7 @@ Before you proceed you need a GitHub account. If you don't have one yet, [create
 
 You should then create the branch in which you will work:
 
-    cd memeoirs-users-bundle
+    cd users-bundle
     git checkout -b users
 
 ## Installation
@@ -61,17 +62,17 @@ Most of what is described in the *Security* section of the documentation is impl
 
 ### Git
 * Each commit must be a logically separate changeset
-* You should use the imperative present tense in the commit messages. Instead of "I added code to create the Universe" use "Create Universe". Think of "a command that applies a logical changeset" instead of "a message that describes what I did".
+* You should use the imperative present tense in commit messages. Instead of "I added code to create planet Earth" use "Create planet Earth". Think of "a command that applies a logical changeset" instead of "a message that describes what I did".
 
 ## Setup FOSUserBundle
 See [FOSUserBundle](https://github.com/FriendsOfSymfony/FOSUserBundle) for an overview of what it does. Then follow the [instructions](https://github.com/FriendsOfSymfony/FOSUserBundle/blob/master/Resources/doc/index.md) to set it up.
 
-Once you have setup FOSUserBundle, you have all it's needed to implement requirements 1-5 above (leave requirement 6 for later). If you're stuck, see [Next steps](https://github.com/FriendsOfSymfony/FOSUserBundle/blob/master/Resources/doc/index.md#next-steps).
+Once you have setup FOSUserBundle, you have all it's needed to implement requirements 1-6 above (leave requirement 7 for later). If you're stuck, see [Next steps](https://github.com/FriendsOfSymfony/FOSUserBundle/blob/master/Resources/doc/index.md#next-steps).
 
 ## Implement multiple email addresses
-Now that you have requirements 1-5 working, the next step is to implement 6:
+Now that you have requirements 1-6 working, the next step is to implement:
 
-6. Users should be able to add several email addresses to their account, each one verified by sending a confirmation email.
+7. Users should be able to add several email addresses to their account, each one verified by sending a confirmation email.
 
 Improve on your existing application to implement this last requirement.
 
