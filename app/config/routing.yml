@@ -1,0 +1,4 @@
+memeoirs_users:
+    resource: "@MemeoirsUsersBundle/Resources/config/routing.yml"
+    prefix:   /
+

@@ -1,0 +1,7 @@
+memeoirs_users_dashboard:
+    pattern:  /u
+    defaults: { _controller: MemeoirsUsersBundle:Users:dashboard }
+
+memeoirs_users:
+    pattern:  /
+    defaults: { _controller: MemeoirsUsersBundle:Users:index }
