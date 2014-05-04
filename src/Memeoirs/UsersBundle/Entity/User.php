@@ -24,8 +24,9 @@ class User extends BaseUser
     {
         parent::__construct();
         // your own logic
+        parent::setUsername("");
     }
-    
+
     /**
      * Get id
      *
@@ -34,5 +35,12 @@ class User extends BaseUser
     public function getId()
     {
         return $this->id;
+    }
+
+    public function setEmail($email)
+    {
+        $email = is_null($email) ? '' : $email;
+        parent::setEmail($email);
+        $this->setUsername($email);
     }
 }

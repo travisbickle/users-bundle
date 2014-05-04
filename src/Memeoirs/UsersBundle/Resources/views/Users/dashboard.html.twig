@@ -9,5 +9,7 @@
     <p>This page is <strong>not yet</strong> protected</p>
   {% else %}
     <p>This page is protected</p>
+    <p><a href="{{ path('fos_user_change_password') }}">Change Password</a></p>
+    <p><a href="{{ path('fos_user_profile_edit') }}">Edit Profile</a></p>
   {% endif %}
 {% endblock %}

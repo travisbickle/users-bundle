@@ -69,4 +69,18 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: Memeoirs\UsersBundle\Entity\User
-
+    use_username_form_type: false
+    from_email:
+        address:        registration@memeoirs.com
+        sender_name:    Memeoirs Registration Services
+    registration:
+        confirmation:
+            enabled:    true
+        form:
+            type: memeoirs_user_registration
+            validation_groups: [MemeoirsRegistration]
+    profile:
+        form:
+            type: memeoirs_user_profile
+            validation_groups: [MemeoirsProfile]
+            
