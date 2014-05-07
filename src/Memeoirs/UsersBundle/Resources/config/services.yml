@@ -5,8 +5,14 @@ services:
 #    memeoirs_users.example:
 #        class: %memeoirs_users.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]
+    memeoirs_users.profile.form.type:
+        class: Memeoirs\UsersBundle\Form\Type\ProfileFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: memeoirs_user_profile }
+
     memeoirs_users.registration.form.type:
-            class: Memeoirs\UsersBundle\Form\Type\RegistrationFormType
-            arguments: [%fos_user.model.user.class%]
-            tags:
-                - { name: form.type, alias: memeoirs_user_registration }
+        class: Memeoirs\UsersBundle\Form\Type\RegistrationFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: memeoirs_user_registration }
